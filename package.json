@@ -1,7 +1,7 @@
 {
 	"name": "proof-general-keybindings-for-vscoq",
 	"displayName": "Proof General keybindings for VSCoq",
-	"description": "Provides keybindings for vscoq that mimic Proof General",
+	"description": "Provides keybindings for VSCoq that mimic Proof General",
 	"version": "0.2.0",
 	"publisher": "siegebell",
   "author": {
