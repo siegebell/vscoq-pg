@@ -1,0 +1,65 @@
+{
+	"name": "proof-general-keybindings-for-vscoq",
+	"displayName": "Proof General keybindings for VSCoq",
+	"description": "Provides keybindings for vscoq that mimic Proof General",
+	"version": "0.2.0",
+	"publisher": "siegebell",
+  "author": {
+    "name": "Christian J. Bell",
+    "email": "siegebell@gmail.com",
+    "url": "http://people.csail.mit.edu/cj/"
+  },
+  "license": "MIT",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Keymaps"
+	],
+  "keywords": [
+    "coq", "vscoq"
+  ],
+  "readme": "https://github.com/siegebell/vscoq-pg/blob/master/README.md",
+  "bugs": "https://github.com/siegebell/vscoq-pg/issues",
+  "homepage": "https://github.com/siegebell/vscoq-pg/blob/master/README.md",
+  "preview": true,
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/siegebell/vscoq-pg.git"
+  },
+	"contributes": {
+    "keybindings": [
+      {"key": "ctrl+c ctrl+r", "command": "extension.coq.reset", "when": "editorTextFocus && editorLangId == 'coq'" },
+      {"key": "ctrl+c ctrl+r", "command": "extension.coq.reset", "when": "resourceScheme==coq-view" },
+      {"key": "ctrl+c ctrl+c", "command": "extension.coq.interrupt", "when": "editorTextFocus && editorLangId == 'coq'" },
+      {"key": "ctrl+c ctrl+c", "command": "extension.coq.interrupt", "when": "resourceScheme==coq-view" },      
+      {"key": "ctrl+c ctrl+.", "command": "extension.coq.moveCursorToFocus", "when": "editorTextFocus && editorLangId == coq"},
+      // navigation
+      {"key": "ctrl+c ctrl+n",     "command": "extension.coq.stepForward", "when": "editorTextFocus && editorLangId == 'coq'"},
+      {"key": "ctrl+c ctrl+n",     "command": "extension.coq.stepForward", "when": "resourceScheme==coq-view"},
+      {"key": "ctrl+c ctrl+u",     "command": "extension.coq.stepBackward", "when": "editorTextFocus && editorLangId == 'coq'" },
+      {"key": "ctrl+c ctrl+u",     "command": "extension.coq.stepBackward", "when": "resourceScheme==coq-view" },
+      {"key": "ctrl+c ctrl+enter", "command": "extension.coq.interpretToPoint", "when": "editorTextFocus && editorLangId == 'coq'" },
+      {"key": "ctrl+c ctrl+enter", "command": "extension.coq.interpretToPoint", "when": "resourceScheme==coq-view" },
+      {"key": "ctrl+c ctrl+b",     "command": "extension.coq.interpretToEnd", "when": "editorTextFocus && editorLangId == 'coq'" },
+      {"key": "ctrl+c ctrl+b",     "command": "extension.coq.interpretToEnd", "when": "resourceScheme==coq-view" },
+      // query
+      {"key": "ctrl+c ctrl+i", "command": "extension.coq.query.prompt.locate", "when": "editorTextFocus && editorLangId == coq"},
+      {"key": "shift+ctrl+a", "mac": "shift+cmd+a", "command": "extension.coq.query.about", "when": "editorTextFocus && editorLangId == coq"},
+      {"key": "shift+ctrl+k", "mac": "shift+cmd+k", "command": "extension.coq.query.searchAbout", "when": "editorTextFocus && editorLangId == coq"},
+      {"key": "shift+ctrl+l", "mac": "shift+cmd+l", "command": "extension.coq.query.locate", "when": "editorTextFocus && editorLangId == coq"},
+      {"key": "shift+ctrl+c", "mac": "shift+cmd+c", "command": "extension.coq.query.check", "when": "editorTextFocus && editorLangId == coq"},
+      {"key": "shift+ctrl+p", "mac": "shift+cmd+p", "command": "extension.coq.query.print", "when": "editorTextFocus && editorLangId == coq"},
+      // display
+      {"key": "shift+alt+i", "mac": "shift+ctrl+i", "command": "extension.coq.display.toggle.implicitArguments", "when": "editorTextFocus && editorLangId == coq"},
+      {"key": "shift+alt+i", "mac": "shift+ctrl+i", "command": "extension.coq.display.toggle.implicitArguments", "when": "resourceScheme==coq-view"},
+      {"key": "shift+alt+c", "mac": "shift+ctrl+c", "command": "extension.coq.display.toggle.coercions", "when": "editorTextFocus && editorLangId == coq"},
+      {"key": "shift+alt+c", "mac": "shift+ctrl+c", "command": "extension.coq.display.toggle.coercions", "when": "resourceScheme==coq-view"},
+      {"key": "shift+alt+n", "mac": "shift+ctrl+n", "command": "extension.coq.display.toggle.notations", "when": "editorTextFocus && editorLangId == coq"},
+      {"key": "shift+alt+n", "mac": "shift+ctrl+n", "command": "extension.coq.display.toggle.notations", "when": "resourceScheme==coq-view"}
+    ]
+	},
+	"devDependencies": {
+		"vscode": "0.10.x"
+	}
+}
